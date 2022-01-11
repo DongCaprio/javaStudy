@@ -21,7 +21,16 @@
 	<a href='test3?data1=100&data2=200&data3=300&data3=400'>test3</a><br>
 	<hr>
 	
-	<a href="test4/100/200/300">test4</a><br>
+	<a href="test4/100/200/300">test4</a><br><hr>
+	
+	<a href='test5?data1=100&data2=200&data3=300&data3=400'>test5</a><br>
+	<hr>
+	
+	<a href='test6?data1=100&data2=200&data3=300&data3=400'>test6</a><br>
+	<hr>
+	
+	<a href='test7?data1=100'>test7</a><br> <!-- data1만 있는경우 -->
+	<hr>
 	
 </body>
 </html>
