@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 
@@ -59,6 +60,17 @@ public class TestController {
 		for(String str1 : data3) {
 			System.out.println("data3 : " +str1);
 		}
+		return "result";
+	}
+	
+	@GetMapping("test4/{data1}/{data2}/{data3}")
+	public String str4(@PathVariable String data1,
+					   @PathVariable String data2,
+					   @PathVariable String data3) {
+		System.out.println("data1 : " + data1);
+		System.out.println("data2 : " + data2);
+		System.out.println("data3 : " + data3);
+		
 		return "result";
 	}
 	
