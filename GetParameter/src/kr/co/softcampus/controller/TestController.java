@@ -63,8 +63,8 @@ public class TestController {
 		return "result";
 	}
 	
-	@GetMapping("test4/{data1}/{data2}/{data3}")
-	public String str4(@PathVariable String data1,
+	@GetMapping("test4/{data1}/{data2}/{data3}") //RestAPI 방식 @PathVariable이면 {}안에 있는 값과 매핑된다 (형변환도 알아서 해준다)
+	public String test4(@PathVariable String data1, //예를 들어 int data1이었다면 들어온 값은 자동으로 int로 형변환된다
 					   @PathVariable String data2,
 					   @PathVariable String data3) {
 		System.out.println("data1 : " + data1);
