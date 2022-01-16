@@ -27,6 +27,35 @@
 		<form:select path="a4">
 			<form:options items="${requestScope.data_list3 }" itemLabel="key" itemValue="value"/>
 		</form:select>
+		<hr>
+		
+		<form:checkbox path="a5" value="data1"/>항목1 <!-- TestController에서 path값인 a5로 가서 해당 value값이 있으면 체크 없으면 체크안함 -->
+		<form:checkbox path="a5" value="data2"/>항목2
+		<form:checkbox path="a5" value="data3"/>항목3
+		<hr>
+		
+		<form:checkboxes items="${requestScope.data_list1}" path="a6"/>
+		<hr>
+		
+		<form:checkboxes items="${requestScope.data_list2 }" path="a7"/>
+		<hr>
+		
+		<form:checkboxes items="${requestScope.data_list3 }" path="a8" itemLabel="key" itemValue="value"/>
+		<hr>
+		
+		<form:radiobutton path="a9" value="data1"/>항목1
+		<form:radiobutton path="a9" value="data2"/>항목2
+		<form:radiobutton path="a9" value="data3"/>항목3
+		<hr>
+		
+		<form:radiobuttons path="a10" items="${requestScope.data_list1 }"/>
+		<hr>
+		
+		<form:radiobuttons path="a11" items="${requestScope.data_list2 }"/>
+		<hr>
+		
+		<form:radiobuttons path="a12" items="${requestScope.data_list3 }" itemLabel="key" itemValue="value"/>
+		<hr>
 		
 	</form:form>
 </body>

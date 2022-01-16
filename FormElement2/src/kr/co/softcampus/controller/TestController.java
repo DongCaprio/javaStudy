@@ -10,14 +10,25 @@ import kr.co.softcampus.beans.DataBean;
 import kr.co.softcampus.beans.KeyValueBean;
 
 @Controller
-public class TestController {
+public class TestController { //17, 18강 Form 요소 다시보기
 
 	@GetMapping("/test1")
 	public String test1(DataBean bean, Model model) {
 		bean.setA1("data2");
-		bean.setA2("data2");
-		bean.setA3("data2");
+		bean.setA2("data112");
+//		bean.setA3("data2");
 		bean.setA4("data2");
+		
+		String[] chekc_list = {"data1", "data3"};
+		bean.setA5(chekc_list);
+		bean.setA6(chekc_list);
+		bean.setA7(chekc_list);
+		bean.setA8(chekc_list);
+		
+		bean.setA9("data2");
+		bean.setA10("data2");
+		bean.setA11("data2");
+		bean.setA12("data2");
 		
 		String[] data_list1 = {"data1","data2","data3"};
 		model.addAttribute("data_list1",data_list1);
