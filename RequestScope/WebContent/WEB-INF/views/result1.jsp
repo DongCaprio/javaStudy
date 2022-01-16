@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>sub2</h1>
-	주소창은 sub2가 아니라 test2임!!!!!!!!
+	<h1>result1</h1>
+	<h3>data1 : ${requestScope.data1 }</h3>
 </body>
 </html>
