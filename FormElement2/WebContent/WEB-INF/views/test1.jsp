@@ -10,20 +10,23 @@
 <body>
 	<h1>test1</h1>
 	<form:form action="result" modelAttribute="dataBean">
-		<form:select path="a1">
+		<form:select path="a1"> <!-- Contorller에서 a1에 세팅되어있는 값으로 가서 밑의 form태그의 value와 동일한 값이 있다면 그때 그것을 미리 체크해주게 된다 -->
 			<form:option value="data1">항목1</form:option>
 			<form:option value="data2">항목2</form:option>
 			<form:option value="data3">항목3</form:option>
 		</form:select>
 		<hr>
+		
 		<form:select path="a2">
 			<form:options items="${requestScope.data_list1}"/>
 		</form:select>
 		<hr>
+		
 		<form:select path="a3">
 			<form:options items="${requestScope.data_list2 }"/>
 		</form:select>
 		<hr>
+		
 		<form:select path="a4">
 			<form:options items="${requestScope.data_list3 }" itemLabel="key" itemValue="value"/>
 		</form:select>

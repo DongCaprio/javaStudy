@@ -15,7 +15,7 @@ public class TestController { //17, 18강 Form 요소 다시보기
 	@GetMapping("/test1")
 	public String test1(DataBean bean, Model model) {
 		bean.setA1("data2");
-		bean.setA2("data112");
+		bean.setA2("data2");
 //		bean.setA3("data2");
 		bean.setA4("data2");
 		
