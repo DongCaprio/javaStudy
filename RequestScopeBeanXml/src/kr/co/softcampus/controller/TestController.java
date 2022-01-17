@@ -3,6 +3,7 @@ package kr.co.softcampus.controller;
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,15 +17,19 @@ import kr.co.softcampus.beans.DataBean4;
 public class TestController {
 	
 	@Autowired
+	@Lazy
 	DataBean1 requestBean1;
 	
-	@Resource(name = "requestBean2") //Autowired랑 똑같은데 타입말고 이름으로 주입하는것=@Resource
+	@Resource(name = "requestBean2")
+	@Lazy
 	DataBean2 requestBean2;
 	
 	@Autowired
+	@Lazy
 	DataBean3 requestBean3;
 	
 	@Resource(name = "requestBean4")
+	@Lazy
 	DataBean4 requestBean4;
 	
 	@GetMapping("/test1")
@@ -50,8 +55,8 @@ public class TestController {
 		System.out.println("requestBean1.data1 : "+requestBean1.getData1());
 		System.out.println("requestBean1.data2 : "+requestBean1.getData2());
 		
-		System.out.println("requestBean2.data3 : "+requestBean2.getData3());
-		System.out.println("requestBean2.data4 : "+requestBean2.getData4());
+		System.out.println("requestBean2.data1 : "+requestBean2.getData3()); //requestBean2는 java와는 다르게 model에다가 저장안함 근데도 화면출력이 된다!(xml과 어노테이션의 차이)
+		System.out.println("requestBean2.data2 : "+requestBean2.getData4());
 		
 		System.out.println("requestBean3.data5 : "+requestBean3.getData5());
 		System.out.println("requestBean3.data6 : "+requestBean3.getData6());
@@ -60,7 +65,7 @@ public class TestController {
 		System.out.println("requestBean4.data8 : "+requestBean4.getData8());
 		
 		model.addAttribute("requestBean1", requestBean1); //이게 없으면 프린트ln에는 출력되지만 화면에는 출력이 안됨!
-		model.addAttribute("requestBean2", requestBean2);
+		//2가 없는 이유는 2는 없어도 정상작동함
 		model.addAttribute("requestBean3", requestBean3);
 		model.addAttribute("requestBean4", requestBean4);
 		

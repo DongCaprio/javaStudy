@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.RequestScope;
 
 import kr.co.softcampus.beans.DataBean1;
+import kr.co.softcampus.beans.DataBean2;
 
 //프로젝트 작업시 사용할 bean을 정의하는 클래스
 @Configuration
@@ -13,5 +14,11 @@ public class RootAppContext {
 	@RequestScope //Bean이 주입되는 시기는 새로운 요청이 발생했을때!
 	public DataBean1 dataBean1() {
 		return new DataBean1();
+	}
+	
+	@Bean("requestBean2")
+	@RequestScope
+	public DataBean2 dataBean2() {
+		return new DataBean2();
 	}
 }

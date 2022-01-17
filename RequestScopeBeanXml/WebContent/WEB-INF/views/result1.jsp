@@ -10,7 +10,7 @@
 	<h1>result1</h1>
 	<h3>requestBean1.data1 : ${requestScope.requestBean1.data1 }</h3>
 	<h3>requestBean1.data2 : ${requestScope.requestBean1.data2 }</h3>
-
+	
 	<h3>requestBean2.data3 : ${requestScope.requestBean2.data3 }</h3>
 	<h3>requestBean2.data4 : ${requestScope.requestBean2.data4 }</h3>
 	
@@ -19,7 +19,5 @@
 	
 	<h3>requestBean4.data7 : ${requestScope.requestBean4.data7 }</h3>
 	<h3>requestBean4.data8 : ${requestScope.requestBean4.data8 }</h3>
-	
-	
 </body>
 </html>
