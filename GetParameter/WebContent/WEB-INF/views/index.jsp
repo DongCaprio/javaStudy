@@ -31,6 +31,7 @@
 	
 	<a href='test7?data1=100'>test7</a><br> <!-- data1만 있는경우 -->
 	<hr>
+	<hr>
 	
 </body>
 </html>
