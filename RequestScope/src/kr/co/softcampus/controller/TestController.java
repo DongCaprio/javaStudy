@@ -27,8 +27,8 @@ public class TestController {
 	@GetMapping("/result1")
 	public String result1(HttpServletRequest request) {
 		
-		String data1 = (String)request.getAttribute("data1");
-		System.out.println("data1 : "+data1);
+//		String data1 = (String)request.getAttribute("data1");
+//		System.out.println("data1 : "+data1);
 		
 		return "result1";
 	}
