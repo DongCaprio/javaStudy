@@ -20,7 +20,7 @@ public class ServletAppContext implements WebMvcConfigurer{
 	public void configureViewResolvers(ViewResolverRegistry registry) {
 		// TODO Auto-generated method stub
 		WebMvcConfigurer.super.configureViewResolvers(registry);
-		registry.jsp("/WEB-INF/views/", ".jsp");
+		registry.jsp("/WEB-INF/views/", ".jsp"); 
 	}
 	
 	// 정적 파일의 경로를 매핑한다
