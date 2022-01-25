@@ -16,7 +16,8 @@ public class TestController {
 	// 세션영역은 새로운 요청이 발생해도 그 공간이 유지됨(브라우져 꺼질때까지)
 	
 	
-	//위에@SessionAttributes가 작동을하면 똑같은 메소드명을 찾고  리턴값을 "sessionBean1"에 주입한다
+	//위에@SessionAttributes가 작동을하면 똑같은 @ModelAttribute 이름을 찾고 
+//	그 메소드 실행 후 리턴값을 @ModelAttribute의("~")의 ~이름으로 세션영역에 저장한다
 	@ModelAttribute("sessionBean1")
 	public DataBean1 sessionBean1() {
 		return new DataBean1();
@@ -52,7 +53,7 @@ public class TestController {
 	// 있음(Spring에서 가능한것)
 	public String result1(HttpSession session) {
 //		HttpSession session = request.getSession();
-		String data1 = (String) session.getAttribute("data1");
+		String data1 = (String) session.getAttribute("data1"); // session.getAttribute는 Object를 반환하므로 형변환이 꼭 필요하다.
 		System.out.println("data1 : " + data1);
 
 		return "result1";
@@ -60,7 +61,9 @@ public class TestController {
 
 	@GetMapping("/test4")
 	public String test4(HttpSession session) {
-//	public String test4(@SessionAttribute("bean1")DataBean1 bean1) { 이렇게는 사용불가
+//	public String test4(@SessionAttribute("bean1")DataBean1 bean1) { 이렇게는 사용불가!!!
+//		사용불가한 이유는 @SessionAttribute는 session영역에 이미 있는것을 가져오는거지 
+//		 새로운 객체를 저장하는 용도는 아니기 때문이다.(@ModelAttribute랑 헷갈리지말기!)
 		DataBean1 bean1 = new DataBean1();
 		bean1.setData1("문자열4");
 		bean1.setData2("문자열5");
@@ -77,6 +80,8 @@ public class TestController {
 		
 		return "result4";
 	}
+//	@SessionAttribute를 사용하면 Session영역에 저장된 Bean을 주입 받을수 있다.
+//	(메서드의 매개변수에 @SessionAttribute를 써야된다)
 	
 	@GetMapping("/test5")
 	public String test5(@ModelAttribute("sessionBean1")DataBean1 sessionBean1,

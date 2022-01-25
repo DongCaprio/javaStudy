@@ -10,7 +10,7 @@
 	<a href="test1">test1</a><br>
 	<a href="test2">test2</a><br>
 	<a href="test3">test3</a><br>
-	<a href="result1">result1 test1을 미리 눌러야됨</a>
+	<a href="result1">result1 test1,2,3 중 누른것에 대해서 반응한다</a>
 	<hr>
 	<a href="test4">test4</a><br>
 	<a href="result4">result4  Test4를 미리눌러야됨</a><br>
