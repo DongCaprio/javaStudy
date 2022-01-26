@@ -12,6 +12,9 @@ import kr.co.softcampus.beans.DataBean1;
 @Controller
 public class TestController {
 	
+	//ApplicationScope는 따로 어노테이션이 없고
+	//보통 ServletContext객체를 @Autowired해서 사용하고
+	//model같은것 없이 바로 jsp에서 사용가능하다
 	@Autowired
 	ServletContext application;
 	
@@ -41,4 +44,5 @@ public class TestController {
 		System.out.println("bean1.data2 : "+bean1.getData2());
 		return "result1";
 	}
+	
 }
