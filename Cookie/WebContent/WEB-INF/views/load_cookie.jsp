@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="save_cookie">save_cookie</a><br>
-	<a href="load_cookie">load_cookie</a><br>
-	<a href="load_cookie2">load_cookie2 (spring방식 간편)</a><br>
+	<h1>load_cookie</h1>
 </body>
 </html>
