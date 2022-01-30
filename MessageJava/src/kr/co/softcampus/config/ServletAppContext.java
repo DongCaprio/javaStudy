@@ -37,6 +37,10 @@ public class ServletAppContext implements WebMvcConfigurer{
 	public ReloadableResourceBundleMessageSource messageSource() {
 		
 		ReloadableResourceBundleMessageSource res = new ReloadableResourceBundleMessageSource();
-		res.setBasename("/WEB-INF/properties/data1"); //.properties는 생략해야 된다.
+//		res.setBasename("/WEB-INF/properties/data1"); 
+		//경로지정시 파일의 확장자인 .properties는 생략해야 된다.
+		res.setBasenames("/WEB-INF/properties/data1", "/WEB-INF/properties/data2");
+		//여러개 지정시에는 setBasenames 를 사용함
+		return res;
 	}
 }
