@@ -20,17 +20,17 @@ public class TestController {
 	@PostMapping("input_pro")
 	public String input_pro(@Valid DataBean1 dataBean1, BindingResult result) {
 		
-//		System.out.println("data1 : "+dataBean1.getData1());
-//		System.out.println("data2 : "+dataBean1.getData2());
-//		System.out.println("BindingResult : "+result);
+		System.out.println("data1 : "+dataBean1.getData1());
+		System.out.println("data2 : "+dataBean1.getData2());
+		System.out.println("BindingResult : "+result);
 		
 		//유효성 검사에서 위반된 부분이있다면 hasErrors()는 true
 		if(result.hasErrors()) {
 			//유효성 위반 모든 결과를 List로 가져온다
 			for(ObjectError obj : result.getAllErrors()) {
-//				System.out.println("메시지 : "+obj.getDefaultMessage());
-//				System.out.println("code : "+obj.getCode());
-//				System.out.println("object name : "+obj.getObjectName());
+				System.out.println("메시지 : "+obj.getDefaultMessage());
+				System.out.println("code : "+obj.getCode());
+				System.out.println("object name : "+obj.getObjectName());
 				System.out.println("-----------배열-----------");
 				String[] codes = obj.getCodes(); //이걸 자주 사용한다.getCodes()
 				for(String c1 : codes) {
