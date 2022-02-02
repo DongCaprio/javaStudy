@@ -14,7 +14,7 @@
 		data1 : <form:radiobutton path="data1" value="true"/> true
 				<form:radiobutton path="data1" value="false"/> false <br>
 		<form:errors path='data1'/><br>
-		<form:button type="submit">확인</form:button>
+		<form:button type="submit">확인</form:button> 
 	</form:form>
 </body>
 </html>
