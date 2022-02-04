@@ -11,7 +11,7 @@
 	<h1>input_data</h1>
 	<form:form action="input_pro" modelAttribute="dataBean1" method="post">
 		
-		data1 : <form:radiobutton path="data1" value="true"/> true 
+		data1 : <form:radiobutton path="data1" value="true"/> true
 				<form:radiobutton path="data1" value="false"/> false <br>
 		<form:errors path='data1'/><br>
 		<form:button type="submit">확인</form:button> 
