@@ -10,7 +10,7 @@
 <body>
 	<c:forEach var='obj' items='${list }'>
 		${obj.data1 }, ${obj.data2 }, ${obj.data3 }<br/>
-	
+	 
 	</c:forEach>
 </body>
 </html>
