@@ -24,6 +24,4 @@ public class DataBean {
 	public void setData3(String data3) {
 		this.data3 = data3;
 	}
-	
-	
 }
