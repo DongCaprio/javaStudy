@@ -24,7 +24,7 @@ public class RestTestController {
 		list.add(bean1);
 		list.add(bean2);
 		list.add(bean3);
-		  
+
 		//json객체로 만들기 위한 코드
 		ResponseEntity<ArrayList<DataBean>> entry = 
 				new ResponseEntity<ArrayList<DataBean>>(list, HttpStatus.OK);
