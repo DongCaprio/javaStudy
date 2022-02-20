@@ -12,4 +12,15 @@ public class BoardController {
 	public String main() {
 		return "board/main";
 	}
+	
+	@GetMapping("/read")
+	public String read() {
+		return "board/read";
+	}
+	
+	@GetMapping("/write")
+	public String write() {
+		return "board/write";
+	}
+	
 }
