@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:url var='root' value="/"/> <%--value를 이용해서 절대경로를 구하게된다. --%>
+<%-- <c:url var='root' value="/"/> --%> <%--value를 이용해서 절대경로를 구하게된다. --%>
+<c:set var='root' value="${pageContext.request.contextPath }/"/>
 
 <!-- 상단 메뉴 부분 -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top shadow-lg">
