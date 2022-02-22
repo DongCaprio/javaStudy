@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var='root' value="${pageContext.request.contextPath }/"/>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +16,6 @@
 </head>
 <body>
 
-<!-- 상단 메뉴 부분 -->
 <c:import url="/WEB-INF/views/include/top_menu.jsp"/>
 
 <div class="container" style="margin-top:100px">
@@ -53,6 +51,14 @@
 
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"/>
 
-
 </body>
 </html>
+
+
+
+
+
+
+
+
+    

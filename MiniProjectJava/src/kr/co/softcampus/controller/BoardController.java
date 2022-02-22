@@ -32,5 +32,12 @@ public class BoardController {
 	public String delete() {
 		return "board/delete";
 	}
-	
 }
+
+
+
+
+
+
+
+

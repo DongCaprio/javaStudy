@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var='root' value="${pageContext.request.contextPath }/"/>
+<c:set var='root' value='${pageContext.request.contextPath}/'/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +16,7 @@
 </head>
 <body>
 
-
 <c:import url="/WEB-INF/views/include/top_menu.jsp"/>
-
 
 <div class="container" style="margin-top:100px">
 	<div class="row">
@@ -26,7 +24,7 @@
 		<div class="col-sm-6">
 			<div class="card shadow">
 				<div class="card-body">
-					<form action="${root}board/read" method="get">
+					<form action="${root }board/read" method="get">
 					<div class="form-group">
 						<label for="board_subject">제목</label>
 						<input type="text" id="board_subject" name="board_subject" class="form-control"/>
@@ -57,3 +55,4 @@
 
 </body>
 </html>
+    

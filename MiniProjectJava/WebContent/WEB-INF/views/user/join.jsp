@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var='root' value="${pageContext.request.contextPath }/"/>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +58,17 @@
 		<div class="col-sm-3"></div>
 	</div>
 </div>
+
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"/>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+    

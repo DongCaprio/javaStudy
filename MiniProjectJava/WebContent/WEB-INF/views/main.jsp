@@ -15,9 +15,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+	
 <c:import url="/WEB-INF/views/include/top_menu.jsp"/>
-
 
 <!-- 게시판 미리보기 부분 -->
 <div class="container" style="margin-top:100px">
@@ -36,7 +35,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td class="text-center">5</td><!--바꾼거  -->
+								<td class="text-center">5</td>
 								<th><a href='${root }board/read'>제목입니다</a></th>
 								<td class="text-center d-none d-xl-table-cell">2018-12-12</td>
 							</tr>
@@ -205,7 +204,18 @@
 		</div>
 	</div>
 </div>
-<c:import url="/WEB-INF/views/include/bottom_info.jsp"/>
 	
+<c:import url="/WEB-INF/views/include/bottom_info.jsp"/>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+    

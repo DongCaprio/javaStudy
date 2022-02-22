@@ -30,4 +30,6 @@ public class UserBean {
 	public void setUser_pw(String user_pw) {
 		this.user_pw = user_pw;
 	}
+	
+	
 }

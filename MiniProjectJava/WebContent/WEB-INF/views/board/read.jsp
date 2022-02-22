@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var='root' value="${pageContext.request.contextPath }/"/>
+<c:set var='root' value='${pageContext.request.contextPath }/'/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +16,7 @@
 </head>
 <body>
 	
-
 <c:import url="/WEB-INF/views/include/top_menu.jsp"/>
-
 
 <div class="container" style="margin-top:100px">
 	<div class="row">
@@ -48,9 +46,9 @@
 					</div>
 					<div class="form-group">
 						<div class="text-right">
-							<a href="${root}board/main" class="btn btn-primary">목록보기</a>
-							<a href="${root}board/modify" class="btn btn-info">수정하기</a>
-							<a href="${root}board/delete" class="btn btn-danger">삭제하기</a>
+							<a href="${root }board/main" class="btn btn-primary">목록보기</a>
+							<a href="${root }board/modify" class="btn btn-info">수정하기</a>
+							<a href="${root }board/delete" class="btn btn-danger">삭제하기</a>
 						</div>
 					</div>
 				</div>
@@ -63,6 +61,6 @@
 
 <c:import url="/WEB-INF/views/include/bottom_info.jsp"/>
 
-
 </body>
 </html>
+    
