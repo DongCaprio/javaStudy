@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -110,6 +112,20 @@ public class ServletAppContext implements WebMvcConfigurer{
 		
 		InterceptorRegistration reg1 = registry.addInterceptor(topMenuInterceptor);
 		reg1.addPathPatterns("/**");
+	}
+	
+	//위의 properties설정과 밑Bean의 Properties 설정이 곂치면 오류발생
+	//해결책으로 PropertySourcesPlaceholderConfigurer의 새로운 Bean을 생성해준다
+	@Bean
+	public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
+		return new PropertySourcesPlaceholderConfigurer();
+	}
+	
+	@Bean
+	public ReloadableResourceBundleMessageSource messageSource() {
+		ReloadableResourceBundleMessageSource res = new ReloadableResourceBundleMessageSource();
+		res.setBasenames("WEB-INF/properties/error_message");
+		return res;
 	}
 }
 
