@@ -53,7 +53,7 @@ public class UserController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		UserValidator validator1 = new UserValidator();
-		binder.addValidators(validator1);
+		binder.addValidators(validator1);  
 	}
 }
 
