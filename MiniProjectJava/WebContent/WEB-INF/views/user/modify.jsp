@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <c:set var='root' value="${pageContext.request.contextPath }/"/>
 <!DOCTYPE html>
 <html>
@@ -26,6 +27,7 @@
 			<div class="card shadow">
 				<div class="card-body">
 					<form action="${root }user/modify" method="get">
+					<form:form action="${root }user/moidfy_pro" method="post"></form:form>
 					<div class="form-group">
 						<label for="user_name">이름</label>
 						<input type="text" id="user_name" name="user_name" class="form-control" value="홍길동" disabled="disabled"/>
