@@ -72,7 +72,8 @@ public class UserController {
 	}
 	
 	@GetMapping("/modify")
-	public String modify() {
+	public String modify(@ModelAttribute("modifyUserBean") UserBean modifyUserBean) {
+		userService.getModifyUserInfo(modifyUserBean);
 		return "user/modify";
 	}
 	
@@ -80,6 +81,11 @@ public class UserController {
 	public String logout() {
 		loginUserBean.setUserLogin(false);
 		return "user/logout";
+	}
+	
+	@GetMapping("/not_login")
+	public String not_login() {
+		return "user/not_login";
 	}
 	
 	@InitBinder
