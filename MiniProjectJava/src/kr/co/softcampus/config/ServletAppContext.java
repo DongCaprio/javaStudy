@@ -135,7 +135,7 @@ public class ServletAppContext implements WebMvcConfigurer{
 		reg2.excludePathPatterns("/board/main");
 	}
 	
-	//위의 properties설정과 밑Bean의 Properties 설정이 곂치면 오류발생
+	//위의 properties설정과 밑Bean의 Properties 설정이 겹치면 오류발생
 	//해결책으로 PropertySourcesPlaceholderConfigurer의 새로운 Bean을 생성해준다
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
