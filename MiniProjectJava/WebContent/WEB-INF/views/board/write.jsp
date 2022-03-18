@@ -28,6 +28,7 @@
 					<form:form action='${root }board/write_pro' method='post' modelAttribute="writeContentBean" enctype="multipart/form-data">
 											<!-- enctype="multipart/form-data" 을 지정해줘야지 작성글뿐만 아니라 파일도 업로드가 가능하다(뒤에 멀티파트도 똑같이 써야지만 된다,정해진것임
 											이걸 위해서 ContentBean에 프로퍼티 생성 및 servletAppContext, SpringConfigClass 도 변경해야한다  -->
+						<form:hidden path="content_board_idx"/>
 						<div class="form-group">
 							<form:label path="content_subject">제목</form:label>
 							<form:input path="content_subject" class='form-control'/>
