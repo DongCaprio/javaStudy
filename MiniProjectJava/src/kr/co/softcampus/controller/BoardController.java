@@ -84,6 +84,10 @@ public class BoardController {
 		
 			model.addAttribute("board_info_idx", board_info_idx);
 			model.addAttribute("content_idx",content_idx);
+			
+			ContentBean tempcContentBean = boardService.getContentInfo(content_idx);
+			modifyContentBean.setContent_writer_name(tempcContentBean.getContent_writer_name());
+			
 		return "board/modify";
 	}
 	
