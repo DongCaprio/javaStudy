@@ -34,4 +34,8 @@ public class BoardDao {
 		boardMapper.modifyContentInfo(modifycContentBean);
 	}
 	
+	public void deleteContentInfo(int content_idx) {
+		boardMapper.deleteContentInfo(content_idx);
+	}
+	
 }
