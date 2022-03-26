@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.softcampus.beans.ContentBean;
+import kr.co.softcampus.beans.PageBean;
 import kr.co.softcampus.beans.UserBean;
 import kr.co.softcampus.service.BoardService;
 
@@ -40,6 +41,9 @@ public class BoardController {
 		
 		List<ContentBean> contentList = boardService.getContentList(board_info_idx, page);
 		model.addAttribute("contentList", contentList);
+		
+		PageBean pageBean = boardService.getContentCnt(board_info_idx, page);
+		model.addAttribute("pageBean",pageBean);
 		
 		return "board/main";
 	}

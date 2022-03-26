@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.softcampus.beans.ContentBean;
+import kr.co.softcampus.beans.PageBean;
 import kr.co.softcampus.beans.UserBean;
 import kr.co.softcampus.dao.BoardDao;
 
@@ -26,7 +27,10 @@ public class BoardService {
 	
 	@Value("${page.listcnt}")
 	private int page_listcnt;
-
+	
+	@Value("${page.paginationcnt}")
+	private int page_paginationcnt;
+	
 	@Autowired
 	private BoardDao boardDao;
 
@@ -87,6 +91,12 @@ public class BoardService {
 	
 	public void deleteContentInfo(int content_idx) {
 		boardDao.deleteContentInfo(content_idx);
+	}
+	
+	public PageBean getContentCnt(int content_board_idx, int currentPage) {
+		int content_cnt = boardDao.getContentCnt(content_board_idx);
+		PageBean pageBean = new PageBean(content_cnt, currentPage, page_listcnt, page_paginationcnt);
+		return pageBean;
 	}
 	
 	

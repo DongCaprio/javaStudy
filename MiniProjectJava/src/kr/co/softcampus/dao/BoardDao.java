@@ -39,4 +39,8 @@ public class BoardDao {
 		boardMapper.deleteContentInfo(content_idx);
 	}
 	
+	public int getContentCnt(int content_board_idx) {
+		return boardMapper.getContentCnt(content_board_idx);
+	}
+	
 }
